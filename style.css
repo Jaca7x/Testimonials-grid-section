@@ -30,7 +30,9 @@ body {
 .container {
     margin: 20px;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    height: 100vh;
     gap: 25px;
     font-family: 'Barlow Semi Condensed', sans-serif;
 }
