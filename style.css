@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+:root {
+    --violet: hsl(263, 55%, 52%);
+    --grayish-blue: hsl(217, 19%, 35%);
+    --blackish-blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+    --ligth-gray: hsl(0, 0%, 81%);
+    --ligth-grayish-blue: hsl(210, 46%, 95%);
+}
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--ligth-gray);
+}
+
+.container {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.cards {
+    position: relative;
+    background-color: var(--violet);
+    padding: 2rem;
+    border-radius: 0.625rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.cards .quotes {
+    position: absolute;
+    right: 30px;
+    top: 0;
+    opacity: 0.5;
+    width: 30%;
+}
+
+.cards .image  {
+    display: flex;
+    align-items:center;
+}
+
+.cards .image img {
+    margin-right: 1.25rem;
+    border-radius: 50%;
+}
+
+.cards h3 {
+    color: white;
+}
+
+.cards small {
+    color: var(--ligth-gray);
+}
+
+.cards h4 {
+    color: var(--white);
+    font-size: 26px;
+    margin: 10px 0 20px;
+}
+
+.cards p {
+    color: var(--ligth-gray);
+    font-size: 17px;
+}
+
+.violet .image img{
+    border: 4px solid var(--ligth-gray);
+}
+
+.darkBlue {
+    background-color: var(--grayish-blue);
+}
+
+.darkBlue small {
+    opacity: 50%;
+}
+
+.grayishBlue {
+    background-color: var(--ligth-grayish-blue);
+}
+
+.grayishBlue h3 {
+    color: var(--grayish-blue);
+}
+
+.grayishBlue small {
+    color: var(--grayish-blue);
+    opacity: 70%;
+}
+
+.grayishBlue h4{
+    color: var(--grayish-blue);
+}
+
+.grayishBlue p {
+    color: var(--grayish-blue);
+    opacity: 80%;
+}
+
+.blackishBlue {
+    background-color: var(--blackish-blue);
+}
+
+.blackishBlue small {
+    opacity: 50%;
+}
+
+.blackishBlue .image img { 
+    border: 4px solid var(--violet);
+}
+
+
+@media (min-width: 640px) {
+    .container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .cards {
+        padding-bottom: 20px;
+    }
+
+    .cards.violet {
+        grid-column: 1/3;
+    }
+
+    .cards .quotes {
+        width: 20%;
+        right: 15%;
+    }
+
+    .cards.last {
+        grid-column: 4;
+        grid-row: 1/3;
+    }
+
+    .cards.blackishBlue {
+        grid-column: 2/4;
+    }
+}
+
+
